@@ -12,7 +12,7 @@ function BookCard({ book }) {
   return (
     <article className="group flex flex-col bg-paper-dark border border-line rounded-sm overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all">
       <div className="relative">
-        <BookCover isbn={book.isbn} title={book.title} className="w-full h-56" />
+        <BookCover isbn={book.isbn} title={book.title} className="w-full aspect-[2/3]" />
         <span className="absolute top-2 left-2 bg-ink/85 text-paper font-mono text-[11px] px-2 py-1 rounded-sm tracking-wide">
           {book.callNumber}
         </span>

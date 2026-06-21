@@ -20,6 +20,10 @@ npm run build
 npm run preview
 ```
 
+## Repository
+
+Source code and project history are available at: https://github.com/priyaprajapati5709-beep/library-.git
+
 ## Features
 
 | Page | What it does |
