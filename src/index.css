@@ -1,0 +1,55 @@
+/* ==========================================================================
+   Design tokens — "card catalog" theme.
+   Tailwind v4 reads custom tokens straight from this @theme block, so
+   classes like `bg-paper`, `text-ink`, `font-display` etc. become
+   available everywhere without touching a tailwind.config.js file.
+   ========================================================================== */
+@import "tailwindcss";
+
+@theme {
+  /* Palette: aged library paper, reading-lamp green, brass tags, ink stamp red */
+  --color-paper: #f4efe1;
+  --color-paper-dark: #ece3cc;
+  --color-ink: #20261d;
+  --color-ink-soft: #4b5246;
+  --color-library: #2f5233;
+  --color-library-dark: #1f3a22;
+  --color-library-light: #5c8a63;
+  --color-brass: #b8862e;
+  --color-brass-light: #d9b15c;
+  --color-stamp: #a8362d;
+  --color-line: #c9bfa0;
+
+  --font-display: "Source Serif 4", Georgia, serif;
+  --font-body: "Work Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+/* Base layer: html/body defaults that Tailwind utilities build on top of */
+html {
+  background-color: var(--color-paper);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Faint paper texture so large flat areas don't look like plain a div */
+body {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(32, 38, 29, 0.05) 1px, transparent 0);
+  background-size: 22px 22px;
+}
+
+/* Respect reduced-motion preference for any transitions/animations we add */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
