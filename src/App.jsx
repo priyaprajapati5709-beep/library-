@@ -8,7 +8,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         {/* Every route nested here renders inside AppLayout, so it gets the Header */}
         <Route element={<AppLayout />}>
